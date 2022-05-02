@@ -2,6 +2,9 @@ input.onButtonPressed(Button.A, function () {
     led.unplot(HORIZONTAL, VERTICAL)
     HORIZONTAL += -1
     if (HORIZONTAL < H_min) {
+        basic.showIcon(IconNames.Angry)
+        basic.clearScreen()
+        soundExpression.hello.play()
         HORIZONTAL = H_min
     }
 })
@@ -9,6 +12,9 @@ input.onPinPressed(TouchPin.P2, function () {
     led.unplot(HORIZONTAL, VERTICAL)
     VERTICAL += -1
     if (VERTICAL < Min) {
+        basic.showIcon(IconNames.Angry)
+        basic.clearScreen()
+        soundExpression.slide.play()
         VERTICAL = Min
     }
 })
@@ -16,6 +22,9 @@ input.onButtonPressed(Button.B, function () {
     led.unplot(HORIZONTAL, VERTICAL)
     HORIZONTAL += 1
     if (HORIZONTAL > H_max) {
+        basic.showIcon(IconNames.Angry)
+        basic.clearScreen()
+        soundExpression.soaring.play()
         HORIZONTAL = H_max
     }
 })
@@ -23,6 +32,8 @@ input.onPinPressed(TouchPin.P1, function () {
     led.unplot(HORIZONTAL, VERTICAL)
     VERTICAL += 1
     if (VERTICAL > Max) {
+        basic.showIcon(IconNames.Angry)
+        basic.clearScreen()
         soundExpression.giggle.play()
         VERTICAL = Max
     }
