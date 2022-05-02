@@ -23,6 +23,7 @@ input.onPinPressed(TouchPin.P1, function () {
     led.unplot(HORIZONTAL, VERTICAL)
     VERTICAL += 1
     if (VERTICAL > Max) {
+        soundExpression.giggle.play()
         VERTICAL = Max
     }
 })
